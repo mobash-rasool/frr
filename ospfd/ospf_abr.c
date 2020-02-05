@@ -57,10 +57,12 @@ static struct ospf_area_range *ospf_area_range_new(struct prefix_ipv4 *p)
 
 	range = XCALLOC(MTYPE_OSPF_AREA_RANGE, sizeof(struct ospf_area_range));
 	range->addr = p->prefix;
-	range->masklen = p->prefixlen;
-	range->cost_config = OSPF_AREA_RANGE_COST_UNSPEC;
+        range->masklen = p->prefixlen;
+        range->cost_config = OSPF_AREA_RANGE_COST_UNSPEC;
 
-	return range;
+        // just checking, pls ignore
+
+        return range;
 }
 
 static void ospf_area_range_free(struct ospf_area_range *range)
